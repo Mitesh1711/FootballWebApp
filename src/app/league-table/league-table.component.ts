@@ -24,8 +24,8 @@ export class LeagueTableComponent implements OnInit {
       console.log(data);
       this.leagueTable = data;
       this.standings = data.standings;
-      this.table = this.standings[0];
-      this.tableData = this.table.table;
+      //this.table = this.standings[0];
+      //this.tableData = this.table.table;
 
       console.log(this.tableData);
     })

@@ -1,0 +1,20 @@
+<table>
+  <thead>
+  <tr>
+    <th>Rank</th><th>Club</th><th>Played Games</th><th>Won</th><th>Drawn</th><th>Lost</th>
+    <th>GF</th><th>GA</th><th>GD</th><th>Points</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let l of tableData">
+    <td>{{l.position}}</td>
+    <td><img src={{l.team.crestUrl}} alt="logo" width="30px" height="30px"> {{l.team.name}}</td>
+    <td>{{l.playedGames}}</td>
+    <td>{{l.won}}</td>
+    <td>{{l.draw}}</td>
+    <td>{{l.lost}}</td>
+    <td>{{l.goalsFor}}</td>
+    <td>{{l.goalsAgainst}}</td>
+    <td>{{l.goalDifference}}</td>
+    <td>{{l.points}}</td>
+  </tr>
+</table>

@@ -1,0 +1,16 @@
+<table >
+  <thead>
+  <td>Date</td>
+  <td>Home Team</td>
+  <td>Goals</td>
+  <td>Away Team</td>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let m of matches" >
+    <td>{{m.utcDate}}</td>
+    <td>{{m.homeTeam.name}}</td>
+    <td>{{m.score.fullTime.homeTeam}}{{m.score.fullTime.awayTeam}}</td>
+    <td>{{m.awayTeam.name}}</td>
+  </tr>
+  </tbody>
+</table>

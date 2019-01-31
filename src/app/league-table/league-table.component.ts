@@ -17,6 +17,7 @@ export class LeagueTableComponent implements OnInit {
 
   ngOnInit() {
     this.loadCompetetionList();
+    this.load();
   }
 
   loadCompetetionList(){
@@ -28,6 +29,11 @@ export class LeagueTableComponent implements OnInit {
       this.tableData = this.table.table;
 
       console.log(this.tableData);
+    })
+  }
+  load(){
+   this.general.getResults().subscribe( data => {
+      console.log(data);
     })
   }
 

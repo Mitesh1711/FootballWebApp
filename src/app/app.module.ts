@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { LeagueTableComponent } from './league-table/league-table.component';
 import {GeneralService} from './general.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LeagueTableComponent
+    LeagueTableComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

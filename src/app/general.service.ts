@@ -19,13 +19,13 @@ export class GeneralService {
   }
 
   getLeagueTable(): Observable<LeagueTable> {
-    var urlPrefix = "http://api.football-data.org/v2/competitions/2021/standings";
+    var urlPrefix = "https://api.football-data.org/v2/competitions/2021/standings";
     let body = this.http.get<LeagueTable>(urlPrefix, httpOption);
 
     return body;
   }
   getResults(): Observable<Results> {
-    var urlPrefix = "http://api.football-data.org/v2/competitions/2021/matches";
+    var urlPrefix = "https://api.football-data.org/v2/competitions/2021/matches";
     let body = this.http.get<Results>(urlPrefix, httpOption);
 
     return body;

@@ -11,6 +11,7 @@ export class ResultsComponent implements OnInit {
   results: any;
   matches: any;
   status: any;
+  date: string;
 
   constructor( private general: GeneralService) { }
 
@@ -23,7 +24,7 @@ export class ResultsComponent implements OnInit {
       this.results = data;
       this.matches = this.results.matches;
       this.status = this.matches.status;
-      console.log(this.matches);
+      //console.log(this.date = this.matches.utcDate);
     })
     }
 }

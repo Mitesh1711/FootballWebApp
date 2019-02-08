@@ -22,18 +22,18 @@ export class LeagueTableComponent implements OnInit {
 
   loadCompetetionList(){
     this.general.getLeagueTable().subscribe( data => {
-      console.log(data);
+      //console.log(data);
       this.leagueTable = data;
       this.standings = data.standings;
       this.table = this.standings[0];
       this.tableData = this.table.table;
 
-      console.log(this.tableData);
+      //console.log(this.tableData);
     })
   }
   load(){
    this.general.getResults().subscribe( data => {
-      console.log(data);
+      //console.log(data);
     })
   }
 

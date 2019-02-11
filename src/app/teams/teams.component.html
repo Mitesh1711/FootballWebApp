@@ -1,8 +1,9 @@
-<div class="container-fluid" >
-<div class="row" >
+<div class="container-fluid " >
+<div class="row " >
   <div class="col-xs-12" *ngFor="let team of teams">
-    <div class="card" style="width: 14rem;">
-      <img class="card-img-top" src="{{team.crestUrl}}" alt="Card image cap">
+    <div class="text-center">
+    <div class="card border-dark " style="width: 250px; height: 450px; margin: 10px;" >
+      <img class="card-img-top embed-responsive" src="{{team.crestUrl}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{team.name}}</h5>
         <p class="card-text">{{team.address}}</p>
@@ -10,5 +11,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>

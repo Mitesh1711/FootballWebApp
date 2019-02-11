@@ -11,7 +11,6 @@ export class ResultsComponent implements OnInit {
   results: any;
   matches: any;
   status: any;
-  date: string;
 
   constructor( private general: GeneralService) { }
 

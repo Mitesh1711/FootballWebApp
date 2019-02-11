@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ResultsComponent } from './results/results.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
+import { FixturesComponent } from './fixtures/fixtures.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
     LeagueTableComponent,
     ResultsComponent,
     TeamsComponent,
-    TeamDetailComponent
+    TeamDetailComponent,
+    FixturesComponent
   ],
   imports: [
     BrowserModule,

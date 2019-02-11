@@ -14,14 +14,16 @@ export class TeamsComponent implements OnInit {
   teams:[];
 
   ngOnInit() {
-    this.loadteams();
+    this.loadTeams();
   }
 
-  loadteams(){
+  loadTeams(){
     this.general.getTeams().subscribe( data => {
       this.teamsObject = data;
       this.teams = this.teamsObject.teams;
-      console.log(this.teams);
+      //console.log(this.teams);
     })
   }
+
+
 }

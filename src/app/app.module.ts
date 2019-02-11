@@ -7,12 +7,16 @@ import { LeagueTableComponent } from './league-table/league-table.component';
 import {GeneralService} from './general.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ResultsComponent } from './results/results.component';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeagueTableComponent,
-    ResultsComponent
+    ResultsComponent,
+    TeamsComponent,
+    TeamDetailComponent
   ],
   imports: [
     BrowserModule,

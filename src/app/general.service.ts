@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {LeagueTable} from './league-table';
-import {Competetion} from './competetion';
 import {Results} from './results';
+import {Teams} from './teams/teams';
 
 
 const httpOption = {
@@ -27,6 +27,12 @@ export class GeneralService {
   getResults(): Observable<Results> {
     var urlPrefix = "https://api.football-data.org/v2/competitions/2021/matches";
     let body = this.http.get<Results>(urlPrefix, httpOption);
+
+    return body;
+  }
+  getTeams(): Observable<Teams> {
+    var urlPrefix = "https://api.football-data.org/v2/competitions/2021/teams";
+    let body = this.http.get<Teams>(urlPrefix, httpOption);
 
     return body;
   }

@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {GeneralService} from '../../general.service';
 
 @Component({
   selector: 'app-team-detail',
@@ -7,11 +8,14 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class TeamDetailComponent implements OnInit {
 
+  @Input() matches: any;
+  @Input() team: any;
 
   constructor() {
   }
 
   ngOnInit() {
+
   }
 
 }

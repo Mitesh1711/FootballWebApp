@@ -36,4 +36,10 @@ export class GeneralService {
 
     return body;
   }
+  getMatchesByTeam(id: number): Observable<any> {
+    var urlPrefix = "https://api.football-data.org/v2/teams/"+id+"/matches";
+    let body = this.http.get<Teams>(urlPrefix, httpOption);
+
+    return body;
+  }
 }

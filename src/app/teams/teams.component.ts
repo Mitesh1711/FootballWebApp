@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {GeneralService} from '../general.service';
 
 @Component({
@@ -8,22 +8,37 @@ import {GeneralService} from '../general.service';
 })
 export class TeamsComponent implements OnInit {
 
-  constructor(private general: GeneralService) { }
+  //@Input() team: any;
+
+  selectedTeam: any;
+  matchesObject: any;
+  matches: [];
+
+  constructor(private general: GeneralService) {
+  }
 
   teamsObject: any;
-  teams:[];
+  teams: [];
 
   ngOnInit() {
     this.loadTeams();
   }
 
-  loadTeams(){
-    this.general.getTeams().subscribe( data => {
+  loadTeams() {
+    this.general.getTeams().subscribe(data => {
       this.teamsObject = data;
       this.teams = this.teamsObject.teams;
-      //console.log(this.teams);
-    })
+
+    });
   }
 
-
+  onSelectTeam(team: any) {
+    this.selectedTeam = team;
+    this.general.getMatchesByTeam(this.selectedTeam.id).subscribe(data => {
+        this.matchesObject = data;
+        this.matches = this.matchesObject.matches.reverse();
+        console.log(this.selectedTeam);
+      }
+    );
+  }
 }

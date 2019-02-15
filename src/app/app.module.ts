@@ -10,6 +10,7 @@ import { ResultsComponent } from './results/results.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 import { FixturesComponent } from './fixtures/fixtures.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FixturesComponent } from './fixtures/fixtures.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [GeneralService],
   bootstrap: [AppComponent]

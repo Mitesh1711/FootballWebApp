@@ -1,7 +1,7 @@
-<div class="container-fluid " >
-<div class="row " >
+
+<div class="row justify-content-center" >
   <div class="col-xs-12" *ngFor="let team of teams">
-    <div class="card border-dark " style="width: 250px; height: 450px; margin: 10px;" (click)="onSelectTeam(team)" >
+    <div class="card border-dark " style="width: 300px; height: 450px; margin: 10px;" (click)="onSelectTeam(team)" >
       <img class="card-img-top embed-responsive" src="{{team.crestUrl}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{team.name}}</h5>
@@ -12,6 +12,6 @@
   </div>
 </div>
   <app-team-detail *ngIf="selectedTeam" [matches]="matches" [team]="selectedTeam"></app-team-detail>
-</div>
+
 
 

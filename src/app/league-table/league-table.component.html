@@ -1,5 +1,5 @@
-      <div class="table-responsive">
-        <table class="table table-hover">
+      <div class="table-responsive hide-lg">
+        <table class="table table-hover" style="text-align:center;">
           <thead>
           <tr>
             <th>Rank</th>
@@ -24,6 +24,42 @@
             <td>{{l.lost}}</td>
             <td>{{l.goalsFor}}</td>
             <td>{{l.goalsAgainst}}</td>
+            <td>{{l.goalDifference}}</td>
+            <td>{{l.points}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive hide-sm">
+        <table class="table table-hover" style="text-align:center;">
+          <thead>
+          <tr>
+            <th>P</th>
+            <th>Club</th>
+            <th>Pl</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GD</th>
+            <th>Pt</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr  *ngFor="let l of tableData">
+            <td>{{l.position}}</td>
+            <td><div class="row">
+              <div class="col-sm-12">
+                <img src={{l.team.crestUrl}} alt="logo" width="30px" height="30px">
+              </div>
+              <div class="col-sm-12">
+                {{l.team.name}}
+              </div>
+            </div></td>
+            <td>{{l.playedGames}}</td>
+            <td>{{l.won}}</td>
+            <td>{{l.draw}}</td>
+            <td>{{l.lost}}</td>
             <td>{{l.goalDifference}}</td>
             <td>{{l.points}}</td>
           </tr>

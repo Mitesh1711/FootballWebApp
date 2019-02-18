@@ -1,0 +1,10 @@
+@media (max-width: 479px){
+  .hide-lg {
+    display: none;
+  }
+}
+@media (min-width: 479px){
+  .hide-sm {
+    display: none;
+  }
+}

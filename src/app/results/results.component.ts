@@ -21,9 +21,9 @@ export class ResultsComponent implements OnInit {
   loadResults(){
     this.general.getResults().subscribe( data => {
       this.results = data;
-      this.matches = this.results.matches;
+      this.matches = this.results.matches.reverse();
       this.status = this.matches.status;
-      //console.log(this.date = this.matches.utcDate);
+      console.log(this.matches[1]);
     })
     }
 }

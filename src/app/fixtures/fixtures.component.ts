@@ -6,24 +6,6 @@ import {GeneralService} from '../general.service';
   templateUrl: './fixtures.component.html',
   styleUrls: ['./fixtures.component.css']
 })
-export class FixturesComponent implements OnInit {
+export class FixturesComponent {
 
-  results: any;
-  matches: any;
-  status: any;
-
-  constructor(private general: GeneralService) { }
-
-  ngOnInit() {
-    this.loadFixtures();
-  }
-
-  loadFixtures(){
-    this.general.getResults().subscribe(data=>{
-      this.results = data;
-      this.matches = this.results.matches;
-      this.status = this.matches.status;
-      //console.log(this.matches);
-    })
-  }
 }

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div>
+    <table class="table-hover hide-lg">
+      <tbody>
+      <tr>
+        <td style="width: 8%">{{leagueTableItem.position}}</td>
+        <td style="width: 28%; text-align: left">
+          <a [routerLink]="leagueTableItem.team.id" (click)="onSelectTeam(leagueTableItem.team.id)">
+            <img src="{{leagueTableItem.team.crestUrl}}" alt="logo"
+                 style="width: 20px; height: auto;margin-right: 5px;">
+            {{leagueTableItem.team.name}}</a></td>
+        <td style="width: 8%">{{leagueTableItem.playedGames}}</td>
+        <td style="width: 8%">{{leagueTableItem.won}}</td>
+        <td style="width: 8%">{{leagueTableItem.draw}}</td>
+        <td style="width: 8%">{{leagueTableItem.lost}}</td>
+        <td style="width: 8%">{{leagueTableItem.goalsFor}}</td>
+        <td style="width: 8%">{{leagueTableItem.goalsAgainst}}</td>
+        <td style="width: 8%">{{leagueTableItem.goalDifference}}</td>
+        <td style="width: 8%">{{leagueTableItem.points}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <table class="hide-sm">
+      <tbody>
+      <tr>
+        <td style="width: 10%">{{leagueTableItem.position}}</td>
+        <td style="width: 30%">
+          <a [routerLink]="leagueTableItem.team.id" (click)="onSelectTeam(leagueTableItem.team.id)">
+            <img src="{{leagueTableItem.team.crestUrl}}" alt="logo"
+                 style="width: 20px; height: auto;margin-right: 5px;">
+            {{leagueTableItem.team.name}}</a>
+        </td >
+        <td style="width: 10%">{{leagueTableItem.playedGames}}</td>
+        <td style="width: 10%">{{leagueTableItem.won}}</td>
+        <td style="width: 10%">{{leagueTableItem.draw}}</td>
+        <td style="width: 10%">{{leagueTableItem.lost}}</td>
+        <td style="width: 10%">{{leagueTableItem.goalDifference}}</td>
+        <td style="width: 10%">{{leagueTableItem.points}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--
+<div class="container-fluid">
+  <div class="row" style="line-height: 3rem">
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.position}}
+    </div>
+    <div class="col-sm-3" style="padding-left: 0; ">
+      <a [routerLink]="leagueTableItem.team.id" (click)="onSelectTeam(leagueTableItem.team.id)"><img src="{{leagueTableItem.team.crestUrl}}" alt="logo"
+           style="width: 20px; height: auto;margin-right: 5px;">
+      {{leagueTableItem.team.name}}</a>
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.playedGames}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.won}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.draw}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.lost}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.goalsFor}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.goalsAgainst}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.goalDifference}}
+    </div>
+    <div class="col-sm-1 text-center">
+      {{leagueTableItem.points}}
+    </div>
+  </div>
+</div>
+-->

@@ -1,0 +1,76 @@
+<div class="container-fluid" >
+  <table style="overflow-x:auto;" class="hide-lg">
+    <thead>
+    <tr>
+      <th style="width: 8%">Rank</th>
+      <th style="width: 28%; text-align: left">Club</th>
+      <th style="width: 8%">Played</th>
+      <th style="width: 8%">Won</th>
+      <th style="width: 8%">Drawn</th>
+      <th style="width: 8%">Lost</th>
+      <th style="width: 8%">GF</th>
+      <th style="width: 8%">GA</th>
+      <th style="width: 8%">GD</th>
+      <th style="width: 8%">Points</th>
+    </tr>
+    </thead>
+  </table>
+  <table class="hide-sm">
+    <thead>
+    <tr>
+      <th style="width: 10%">P</th>
+      <th style="width: 30%; text-align: left">Club</th>
+      <th style="width: 10%">Pl</th>
+      <th style="width: 10%">W</th>
+      <th style="width: 10%">D</th>
+      <th style="width: 10%">L</th>
+      <th style="width: 10%">GD</th>
+      <th style="width: 10%">Pt</th>
+    </tr>
+    </thead>
+  </table>
+</div>
+
+<app-league-table-item *ngFor="let t of table" [leagueTableItem]="t"></app-league-table-item>
+
+    <!--
+    <div class="container-fluid">
+      <div class="row" style="margin: 25px 0 5px; size: 2rem">
+        <div class="col-sm-1 font-weight-bold text-center">
+    Rank
+        </div>
+        <div class="col-sm-3 font-weight-bold" style="padding-left: 0">
+    Club
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    Played
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    Won
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    Draw
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    Lost
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    GF
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    GA
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    GD
+        </div>
+        <div class="col-sm-1 font-weight-bold text-center">
+    Points
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <app-league-table-item *ngFor="let t of table" [leagueTableItem]="t"></app-league-table-item>
+        </div>
+      </div>
+    </div>
+    -->

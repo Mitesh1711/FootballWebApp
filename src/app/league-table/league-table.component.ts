@@ -17,17 +17,15 @@ export class LeagueTableComponent implements OnInit {
   //@Output() selectedTeam = new EventEmitter<any>();
 
   ngOnInit() {
-    this.loadCompetitionList();
+    //this.loadCompetitionList();
   }
 
   loadCompetitionList(){
     this.general.getLeagueTable().subscribe( data => {
-      //console.log(data);
       this.leagueTable = data;
       this.standings = data.standings;
       this.table = this.standings[0];
       this.tableData = this.table.table;
-      console.log(this.tableData);
     })
   }
   /*onClickTeamName(team:any){

@@ -1,0 +1,9 @@
+<div class="card border-dark " style="width: 300px; height: 450px; margin: 10px;" [routerLink]="team.id"
+     routerLinkActive="active">
+  <img class="card-img-top embed-responsive" src="{{team.crestUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{team.name}}</h5>
+    <p class="card-text">{{team.address}}</p>
+    <a href="{{team.website}}" class="btn btn-outline-dark btn-lg btn-block" target="_blank">Visit Website</a>
+  </div>
+</div>

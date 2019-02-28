@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {GeneralService} from '../general.service';
 
 @Component({
   selector: 'app-results',
@@ -8,22 +7,10 @@ import {GeneralService} from '../general.service';
 })
 export class ResultsComponent implements OnInit {
 
-  results: any;
-  matches: any;
-  status: any;
 
-  constructor( private general: GeneralService) { }
+  constructor( ) { }
 
   ngOnInit() {
-    this.loadResults();
-  }
 
-  loadResults(){
-    this.general.getResults().subscribe( data => {
-      this.results = data;
-      this.matches = this.results.matches.reverse();
-      this.status = this.matches.status;
-      console.log(this.matches[1]);
-    })
-    }
+  }
 }

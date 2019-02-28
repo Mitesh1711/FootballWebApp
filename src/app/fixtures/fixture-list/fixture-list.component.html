@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <table class="table-hover">
+    <thead>
+    <tr>
+      <th style="width: 40%">Date</th>
+      <th style="width: 30%">Home Team</th>
+      <th style="width: 30%">Away Team</th>
+    </tr>
+    </thead>
+  </table>
+  <app-fixture *ngFor="let m of matches" [match]="m"></app-fixture>
+</div>

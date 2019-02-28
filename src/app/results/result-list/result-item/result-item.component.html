@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <table class="table-hover">
+    <tbody>
+    <tr *ngIf="match.status === 'FINISHED'">
+      <td style="width: 25%">{{match.utcDate | date:'EEEE dd MMMM yyyy'}}</td>
+      <td style="width: 25%"><a routerLink="match.homeTeam.id" (click)="onSelect(match.homeTeam.id)">{{match.homeTeam.name}}</a></td>
+      <td style="width: 15%; text-align: center">
+        <div class="row" style="background-color: darkmagenta; color: white">
+          <div class="col-sm-6 text-center">
+            <b>{{match.score.fullTime.homeTeam}}</b>
+          </div>
+          <div class="col-sm-6 text-center">
+            <b>{{match.score.fullTime.awayTeam}}</b>
+          </div>
+        </div>
+      </td>
+      <td style="width: 35%; padding-left: 10%"><a routerLink="match.awayTeam.id" (click)="onSelect(match.awayTeam.id)">{{match.awayTeam.name}}</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

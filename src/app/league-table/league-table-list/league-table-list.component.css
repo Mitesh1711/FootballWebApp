@@ -1,7 +1,18 @@
 .container-fluid{
+  margin: 0;
   padding: 0;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th{
+  text-align: center;
+  padding: 8px;
+  background-color: transparent;
+}
 @media (max-width: 479px){
   .hide-lg {
     display: none;

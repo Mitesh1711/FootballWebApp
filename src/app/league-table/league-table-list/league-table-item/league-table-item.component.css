@@ -1,0 +1,32 @@
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: black;
+}
+a :hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  padding: 8px;
+}
+@media (max-width: 479px){
+  .hide-lg {
+    display: none;
+  }
+}
+@media (min-width: 479px){
+  .hide-sm {
+    display: none;
+  }
+}

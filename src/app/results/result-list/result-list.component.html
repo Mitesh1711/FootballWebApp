@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <table>
+    <thead>
+    <tr>
+      <th style="width: 25%">Date</th>
+      <th style="width: 25%">Home Team</th>
+      <th style="width: 15%; text-align: center">Goals</th>
+      <th style="width: 35%; padding-left: 10%">Away Team</th>
+    </tr>
+    </thead>
+  </table>
+  <app-result-item *ngFor="let m of matches" [match]="m"></app-result-item>
+</div>

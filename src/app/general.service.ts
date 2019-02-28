@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {LeagueTable} from './league-table';
-import {Results} from './results';
-import {Teams} from './teams/teams';
 
 
 const httpOption = {
@@ -18,27 +15,27 @@ export class GeneralService {
   constructor(private http: HttpClient) {
   }
 
-  getLeagueTable(): Observable<LeagueTable> {
+  getLeagueTable(): Observable<any> {
     var urlPrefix = "https://api.football-data.org/v2/competitions/2021/standings";
-    let body = this.http.get<LeagueTable>(urlPrefix, httpOption);
+    let body = this.http.get<any>(urlPrefix, httpOption);
 
     return body;
   }
-  getResults(): Observable<Results> {
+  getResults(): Observable<any> {
     var urlPrefix = "https://api.football-data.org/v2/competitions/2021/matches";
-    let body = this.http.get<Results>(urlPrefix, httpOption);
+    let body = this.http.get<any>(urlPrefix, httpOption);
 
     return body;
   }
-  getTeams(): Observable<Teams> {
+  getTeams(): Observable<any> {
     var urlPrefix = "https://api.football-data.org/v2/competitions/2021/teams";
-    let body = this.http.get<Teams>(urlPrefix, httpOption);
+    let body = this.http.get<any>(urlPrefix, httpOption);
 
     return body;
   }
   getMatchesByTeam(id: number): Observable<any> {
     var urlPrefix = "https://api.football-data.org/v2/teams/"+id+"/matches";
-    let body = this.http.get<Teams>(urlPrefix, httpOption);
+    let body = this.http.get<any>(urlPrefix, httpOption);
 
     return body;
   }

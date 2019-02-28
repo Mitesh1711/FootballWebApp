@@ -32,7 +32,7 @@ export class TeamsComponent implements OnInit {
     });
   }
 
-  onSelectTeam(team: any) {
+  /*onSelectTeam(team: any) {
     this.selectedTeam = team;
     this.general.getMatchesByTeam(this.selectedTeam.id).subscribe(data => {
         this.matchesObject = data;
@@ -40,5 +40,5 @@ export class TeamsComponent implements OnInit {
         console.log(this.selectedTeam);
       }
     );
-  }
+  }*/
 }

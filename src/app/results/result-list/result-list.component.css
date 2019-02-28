@@ -1,0 +1,11 @@
+.container-fluid {
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  text-align: left;
+  padding: 8px;
+}

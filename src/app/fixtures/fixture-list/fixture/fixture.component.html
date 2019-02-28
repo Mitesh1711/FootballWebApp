@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <table class="table-hover">
+    <tbody>
+    <tr *ngIf="match.status === 'SCHEDULED'">
+      <td style="width: 40%">{{match.utcDate | date:'EEEE dd MMMM yyyy'}}</td>
+      <td style="width: 30%"><a routerLink="match.homeTeam.id" (click)="onSelect(match.homeTeam.id)">{{match.homeTeam.name}}</a></td>
+      <td style="width: 30%"><a routerLink="match.awayTeam.id" (click)="onSelect(match.awayTeam.id)">{{match.awayTeam.name}}</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

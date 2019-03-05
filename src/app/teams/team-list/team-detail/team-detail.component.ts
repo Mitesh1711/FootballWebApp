@@ -17,10 +17,12 @@ export class TeamDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe( (params: Params) => {
       this.id = params['id'];
-    })
-    this.ts.getTeam(this.id).subscribe(data => {
+      this.ts.getTeam(this.id).subscribe(data => {
       this.team = data;
-    })
+      });
+    });
+   
+    
   }
 
 }
